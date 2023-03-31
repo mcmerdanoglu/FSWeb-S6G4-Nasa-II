@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BiComponent(props) {
+export default function ApodContainer(props) {
   const { data, dateChange, currentDate } = props;
   function dateChangeHandler(e) {
     console.log(e.target.value);
@@ -17,15 +17,18 @@ export default function BiComponent(props) {
         value={currentDate}
         name="apodDate"
       ></input>
+      <p>{data.explanation}</p>
+      <p>{data.hdurl}</p>
+      <p>{data.media_type}</p>
       {data.media_type === "image" && (
-        <img src={data.hdurl} alt={data.title} width="500" height="600" />
+        <img src={data.hdurl} alt={data.title} width="1000" height="600" />
+      )}
+      {data.media_type === "video" && (
+        <iframe width="800" height="600" src={data.url}></iframe>
       )}
       <p>{data.service_version}</p>
       <p>{data.title}</p>
-      {data.media_type === "video" && (
-        <iframe width="420" height="315" src={data.url}></iframe>
-      )}
-      <p>{data.explanation}</p>
+      <p>{data.url}</p>
     </div>
   );
 }
