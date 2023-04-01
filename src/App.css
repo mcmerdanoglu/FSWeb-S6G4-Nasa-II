@@ -83,8 +83,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 20px;
   align-items: center;
-  align-content: flex-start;
+  align-content: space-around;
   flex-grow: 1;
   width: 16vw;
   background-color: rgba(50, 42, 42, 0.833);
@@ -167,6 +168,11 @@ button {
 
 a {
   color: white;
+}
+
+h3 {
+  font-style: italic;
+  padding: 80px 0 0 0;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -166,6 +166,7 @@ export default function ApodContainer(props) {
             <a href="https://instagram.com">
               <FaInstagram />
             </a>
+            <h3>Inspired by Thomas Bouvier</h3>
           </div>
         </div>
       </div>
